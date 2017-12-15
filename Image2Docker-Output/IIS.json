@@ -1,0 +1,213 @@
+{
+    "ApplicationPools":  {
+                             "applicationPools":  [
+                                                      "DefaultAppPool",
+                                                      "Classic .NET AppPool",
+                                                      ".NET v2.0 Classic",
+                                                      ".NET v2.0",
+                                                      ".NET v4.5 Classic",
+                                                      ".NET v4.5",
+                                                      "MyAngular2App",
+                                                      "MyAspNetCoreWeb",
+                                                      "MyAspNetMvcWeb",
+                                                      "MyAspNetWebForms",
+                                                      "MyWCFService"
+                                                  ],
+                             "applicationPoolDefaults":  {
+                                                             "managedRuntimeVersion":  "v4.0",
+                                                             "processModel":  {
+                                                                                  "identityType":  "ApplicationPoolIdentity"
+                                                                              }
+                                                         }
+                         },
+    "VirtualDirectoryDefaults":  [
+
+                                 ],
+    "AspNet35Status":  "Present",
+    "ApplicationDefaults":  [
+
+                            ],
+    "SiteDefaults":  [
+                         [
+
+                         ],
+                         [
+
+                         ]
+                     ],
+    "WCFStatus":  "Present",
+    "ApplicationPoolPerSite":  [
+                                   {
+                                       "Name":  "DefaultAppPool",
+                                       "RunTimeVersion":  "v4.0"
+                                   },
+                                   {
+                                       "Name":  "Classic .NET AppPool",
+                                       "RunTimeVersion":  "v2.0"
+                                   },
+                                   {
+                                       "Name":  ".NET v2.0 Classic",
+                                       "RunTimeVersion":  "v2.0"
+                                   },
+                                   {
+                                       "Name":  ".NET v2.0",
+                                       "RunTimeVersion":  "v2.0"
+                                   },
+                                   {
+                                       "Name":  ".NET v4.5 Classic",
+                                       "RunTimeVersion":  "v4.0"
+                                   },
+                                   {
+                                       "Name":  ".NET v4.5",
+                                       "RunTimeVersion":  "v4.0"
+                                   },
+                                   {
+                                       "Name":  "MyAngular2App",
+                                       "RunTimeVersion":  "v2.0"
+                                   },
+                                   {
+                                       "Name":  "MyAspNetCoreWeb",
+                                       "RunTimeVersion":  ""
+                                   },
+                                   {
+                                       "Name":  "MyAspNetMvcWeb",
+                                       "RunTimeVersion":  "v4.0"
+                                   },
+                                   {
+                                       "Name":  "MyAspNetWebForms",
+                                       "RunTimeVersion":  "v4.0"
+                                   },
+                                   {
+                                       "Name":  "MyWCFService",
+                                       "RunTimeVersion":  "v4.0"
+                                   }
+                               ],
+    "HttpHandlers":  [
+
+                     ],
+    "Status":  "Present",
+    "Websites":  [
+                     {
+                         "Name":  "Default Web Site",
+                         "ID":  "1",
+                         "Applications":  [
+                                              {
+                                                  "Path":  "/",
+                                                  "ApplicationPool":  null,
+                                                  "VirtualDirectories":  [
+                                                                             {
+                                                                                 "Path":  "/",
+                                                                                 "PhysicalPath":  "C:\\inetpub\\wwwroot"
+                                                                             }
+                                                                         ]
+                                              }
+                                          ],
+                         "Bindings":  [
+                                          {
+                                              "Protocol":  "http",
+                                              "BindingInformation":  "*:80:"
+                                          }
+                                      ]
+                     },
+                     {
+                         "Name":  "MyAngular2App",
+                         "ID":  "2",
+                         "Applications":  [
+                                              {
+                                                  "Path":  "/",
+                                                  "ApplicationPool":  "MyAngular2App",
+                                                  "VirtualDirectories":  [
+                                                                             {
+                                                                                 "Path":  "/",
+                                                                                 "PhysicalPath":  "C:\\inetpub\\Websites\\NodeConfigurator"
+                                                                             }
+                                                                         ]
+                                              }
+                                          ],
+                         "Bindings":  [
+                                          {
+                                              "Protocol":  "http",
+                                              "BindingInformation":  "*:84:"
+                                          }
+                                      ]
+                     },
+                     {
+                         "Name":  "MyAspNetMvcWeb",
+                         "ID":  "4",
+                         "Applications":  [
+                                              {
+                                                  "Path":  "/",
+                                                  "ApplicationPool":  "MyAspNetMvcWeb",
+                                                  "VirtualDirectories":  [
+                                                                             {
+                                                                                 "Path":  "/",
+                                                                                 "PhysicalPath":  "C:\\inetpub\\Websites\\MyAspNetMvcWeb"
+                                                                             }
+                                                                         ]
+                                              },
+                                              {
+                                                  "Path":  "/MyWebAPIMvc",
+                                                  "ApplicationPool":  "MyAspNetMvcWeb",
+                                                  "VirtualDirectories":  [
+                                                                             {
+                                                                                 "Path":  "/",
+                                                                                 "PhysicalPath":  "C:\\inetpub\\Websites\\MyWebAPIMvc"
+                                                                             }
+                                                                         ]
+                                              }
+                                          ],
+                         "Bindings":  [
+                                          {
+                                              "Protocol":  "http",
+                                              "BindingInformation":  "*:81:"
+                                          }
+                                      ]
+                     },
+                     {
+                         "Name":  "MyAspNetWebForms",
+                         "ID":  "5",
+                         "Applications":  [
+                                              {
+                                                  "Path":  "/",
+                                                  "ApplicationPool":  "MyAspNetWebForms",
+                                                  "VirtualDirectories":  [
+                                                                             {
+                                                                                 "Path":  "/",
+                                                                                 "PhysicalPath":  "C:\\inetpub\\Websites\\MyAspNetWebForms"
+                                                                             }
+                                                                         ]
+                                              }
+                                          ],
+                         "Bindings":  [
+                                          {
+                                              "Protocol":  "http",
+                                              "BindingInformation":  "*:82:"
+                                          }
+                                      ]
+                     },
+                     {
+                         "Name":  "MyWCFService",
+                         "ID":  "6",
+                         "Applications":  [
+                                              {
+                                                  "Path":  "/",
+                                                  "ApplicationPool":  "MyWCFService",
+                                                  "VirtualDirectories":  [
+                                                                             {
+                                                                                 "Path":  "/",
+                                                                                 "PhysicalPath":  "C:\\inetpub\\Websites\\MyWCFService"
+                                                                             }
+                                                                         ]
+                                              }
+                                          ],
+                         "Bindings":  [
+                                          {
+                                              "Protocol":  "http",
+                                              "BindingInformation":  "*:83:"
+                                          }
+                                      ]
+                     }
+                 ],
+    "FeatureName":  "IIS-ApplicationDevelopment,IIS-ASPNET45,IIS-CommonHttpFeatures,IIS-DefaultDocument,IIS-DirectoryBrowsing,IIS-HealthAndDiagnostics,IIS-HttpCompressionStatic,IIS-HttpErrors,IIS-HttpLogging,IIS-ISAPIExtensions,IIS-ISAPIFilter,IIS-NetFxExtensibility,IIS-NetFxExtensibility45,IIS-Performance,IIS-RequestFiltering,IIS-Security,IIS-StaticContent,IIS-WebServer,IIS-WebServerRole,NetFx4Extended-ASPNET45",
+    "AspNetStatus":  "Present"
+}

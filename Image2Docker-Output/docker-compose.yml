@@ -1,0 +1,15 @@
+version: '2.1'
+
+services:
+  web:
+    image: demoimage
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - env-variables.env
+      
+networks:
+  default:
+    external:
+      name: nat

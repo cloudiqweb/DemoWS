@@ -1,0 +1,18 @@
+# Create docker image
+docker build -t demoimage .
+
+# Create docker container
+$dockerid = docker run -d --env-file env-variables.env demoimage
+
+# Get docker container logs
+docker logs $dockerid
+
+# Get docker container ip
+docker inspect -f '{{ .NetworkSettings.Networks.nat.IPAddress }}' $dockerid
+
+# Create docker image and container using Docker compose
+docker-compose up -d
+
+# Create docker container using Docker compose
+docker-compose up --no-build -d
+
